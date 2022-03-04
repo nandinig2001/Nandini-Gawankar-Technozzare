@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:active,
+:hover,
+:focus {
+  outline: 0 !important;
+  outline-offset: 0;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--primary-color);
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+
+/*===== Variable Define =====*/
+:root {
+  
+   --primary-color: #f5cb13 ;
+  --secondry-color: #000000;
+  --white-color: #fff;
+  --primary-font: 'Roboto', sans-serif;
+  
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--primary-font);
+  font-size: 100%;
+  font-weight: 400;
+}
+
+/* /*Scroll */
+
+::-webkit-scrollbar {
+  width: 0.625rem;
+} 
+::-webkit-scrollbar-track {
+  background: var(--white-color); 
+} 
+::-webkit-scrollbar-thumb {
+  background:var(--primary-color); 
+} 
+
+h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 3rem;
+  color: var(--secondry-color);
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 2.25rem;
+  text-transform: capitalize;
+  font-family: 'Roboto';
+  color: var(--secondry-color);
+  line-height: 3rem;
+
+}
+
+h4 {
+  color: var(--secondry-color);
+  font-family: var(--secondry-font);
+  text-transform: capitalize;
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 1rem;
+  color: var(--text-color);
+  font-weight: 400;
+  line-height: 1.75rem;
+  letter-spacing: 1px;
+}
+
+.main-btn {
+  display: inline-block;
+  padding: 0.625rem 1.875rem;
+  line-height: 1.5625rem;
+  background-color: var(--primary-color);
+  border: 0.1875rem solid var(--primary-color);
+  color: var(--white-color);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  box-shadow: 0px 2px 10px -1px rgb(0 0 0 / 19%);
+  -webkit-transition: all .4s ease-out 0s;
+  -o-transition: all .4s ease-out 0s;
+  -moz-transition: all .4s ease-out 0s;
+  transition: all .4s ease-out 0s;
+}
+
+.main-btn:hover {
+  background-color: transparent;
+  color: var(--primary-color);
+}
+
+.wrapper {
+  padding-top: 8.25rem;
+  padding-bottom: 8.25rem;
+}
+
+.text-content {
+  width: 70%;
+  margin: auto;
+}
+
+
+/*Nav*/
+
+.navigation-wrap{
+    background-color: var(--primary-color);
+  position:fixed;
+  width:100%;
+  left:0;
+  height: 7rem;
+  z-index:1000;
+  -webkit-transition:all 0.3s ease-out;
+  transition:all 0.3s ease-out;
+} 
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.8rem;
+    color: #ffffff;
+}
+
+.navigation-wrap .nav-item .nav-link{
+  padding:0 0.625rem;
+  font-weight: bold;
+    font-size: 1.4rem;
+    color: #ffffff;
+  transition:all 200ms linear;
+}
+.navbar-toggler:focus{
+  outline:unset;
+  border:unset;
+  box-shadow: none;
+}
+.nav-link{
+  font-size:0.9375rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  color:var(--primary-color);
+  letter-spacing: 1px;
+}
+
+
+/* Change navbar styling on scroll */
+
+.navigation-wrap.scroll-on{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  background:var(--white-color);
+  box-shadow: 0 0.125rem 1.75rem 0 rgb(0,0,0,0.09);
+  transition:all .15s ease-in-out 0s;
+}
+ 
+
+
+/*Top*/
+.top-banner{
+  width:100%;
+  padding:10.875rem 0 9.375rem;
+  align-items: center;
+  background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(250, 231, 127));
+}
+
+/*ABOUT*/
+.about-section{
+  background: var(--white-color);
+  background-image: linear-gradient(to left, rgba(255,0,0,0), rgb(250, 231, 127));
+}
+.about-section .card,
+.about-section .card img{
+  border-radius: 0.625rem;
+}
+.about-section .text-sec{
+  padding-bottom:3rem;
+}
+
+.row>* {
+  padding-bottom: 4rem;
+}
+
+/* SHOP */
+
+.shop-light .card{
+  border:none;
+  background-color: transparent;
+}
+
+.shop-light .card img{
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
+
+.shop-light .card span{
+  display:block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color:var(--primary-color);
+  padding-bottom:2rem;
+  border-bottom:0.0625rem solid rgb(172, 128, 255);
+}
+
+
+.faq{
+  background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(250, 231, 127));
+}
+
+@media (max-width: 767px) {
+  
+    .top-banner{
+        padding:10.875rem 0 9.375rem;
+    }
+
+     .carousel-item{
+        padding:11rem 3.125rem;
+    }
+
+    .footer .footer-link,
+    .footer a i{
+        padding:0 0.6rem;
+        
+    }
+     
+}
+
+
+    
+        
+      
